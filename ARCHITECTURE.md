@@ -36,6 +36,10 @@ The Torus Core is a serverless "AI Operating System". It does not run continuous
     - **Capability-Based Security**: Completely replaced legacy role strings with a bitmask-based permission system (`authorizations` table).
     - **Identity Management**: Supports linking multiple external providers (Telegram, etc.) to a single sovereign soul ID.
     - **Navigation Auditing**: Automatically reports "Sackgassen" (404s) to the security protocol via `/api/log/fault` for fraud prevention analysis.
+4.  **Spartan Node Architecture (SNA)**
+    - Implements deterministic identity derivation to eliminate redundant key storage.
+    - Uses P-Tag based discovery for passive persona management.
+    - See [SPARTAN_NODE_ARCHITECTURE.md](SPARTAN_NODE_ARCHITECTURE.md) for details.
 
 4.  **The Orchestration Layer (`src/core/orchestration/`)**
     - **Modular Deconstruction**: Replacing the monolithic orchestrator with specialized handlers:

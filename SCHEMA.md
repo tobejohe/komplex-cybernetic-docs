@@ -43,6 +43,7 @@
 | provider_id       | TEXT          | Chat ID or Email (hashed)     |
 | encrypted_address | TEXT          | Proactive contact (encrypted) |
 | encryption_iv     | TEXT          | IV for address                |
+| metadata          | TEXT          | JSON (e.g. {"role":"primary_human"}) |
 | is_active         | INTEGER       | 1=active, 0=inactive          |
 
 ---
@@ -120,7 +121,7 @@
 | id         | INTEGER PK |                                                        |
 | user_id    | TEXT       |                                                        |
 | category   | TEXT       | 'fact', 'preference', 'SECURITY', 'CHARACTERISTICS'    |
-| fact_key   | TEXT       | e.g. 'lang', 'totp_secret', 'temp_totp_secret'         |
+| fact_key   | TEXT       | e.g. 'lang', 'active_node_pubkey', 'active_node_handle' |
 | fact_value | TEXT       | Values are encrypted for 'SECURITY' category (AES-GCM) |
 | confidence | INTEGER    | 0-100 (100 = Verified/Final, <100 = Tentative/Temp)    |
 
